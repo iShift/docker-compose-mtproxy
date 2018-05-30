@@ -3,10 +3,12 @@ With docker-compose file you can easy install telegram mtproto proxy and configu
 
 # Docker
 If you have one, read next, if not:
+
 `curl -sSL https://get.docker.com/ | sh`
 
 install docker-compose
 On Ubuntu/Debian:
+
 `sudo apt-get update && sudo apt-get install docker-compose`
 
 # Clone repository
@@ -25,13 +27,20 @@ By default, proxy start at 443 port, if you want another - edit **docker-compose
 
 # Start proxy
 go to folder with that repository:
+
 `cd docker-compose-mtproxy`
 
 and run:
+
 `docker-compose up -d`
+
+# Get logs and connections info
+`docker-compose logs`
+
 
 # Stop proxy
 From repository folder:
+
 `docker-compose down`
 
 
