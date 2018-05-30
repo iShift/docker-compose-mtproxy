@@ -23,7 +23,7 @@ In that file you can configure:
 
 # Change proxy port
 By default, proxy start at 443 port, if you want another - edit **docker-compose.yml**:
-- "443:**443**" 
+- "**443**:443" 
 
 # Start proxy
 go to folder with that repository:
