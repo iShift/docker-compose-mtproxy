@@ -1,0 +1,27 @@
+version: '3'
+
+# Uncoment line if you want make any custom changes, if you want apply any environment change, uncoment "environment:" section too
+
+services:
+    telegram-proxy:
+        image: telegrammessenger/proxy:latest
+        ports:
+           - "443:443" #Proxy port
+          #- "2398:2398" # ONLY FOR TESTING - Show proxy stats on port 2398 outside of docker
+        volumes:
+           - "proxy-config:/data"
+        restart: unless-stopped
+#        environment:
+           #TAG Value, for promote channel
+           #TAG=3f40462915a3e6026a4d790127b95ded 
+           
+           #Preset SECRET, UP TO 16
+           #- SECRET=935ddceb2f6bbbb78363b224099f75c8,2084c7e58d8213296a3206da70356c81
+           
+           #Secret count for generate, UP TO 16
+           #SECRET_COUNT=4
+           
+           #Workers count
+           #WORKERS=16
+volumes:
+  proxy-config:
