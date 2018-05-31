@@ -43,6 +43,9 @@ From repository folder:
 
 `docker-compose down`
 
+# Error ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?
+Use `sudo` with docker comands or add your account to docker group:
+`sudo usermod -aG docker $USER`
 
 # Links
 Telegram docker hub: https://hub.docker.com/r/telegrammessenger/proxy/
