@@ -11,6 +11,12 @@ On Ubuntu/Debian:
 
 `sudo apt-get update && sudo apt-get install docker-compose`
 
+or
+
+`sudo apt-get -y install python-pip`
+`sudo pip install docker-compose`
+
+
 # Clone repository
 `git clone https://github.com/iShift/docker-compose-mtproxy.git`
 
@@ -45,7 +51,7 @@ From repository folder:
 
 # Error ERROR: Couldn't connect to Docker daemon at http+docker://localhost - is it running?
 Use `sudo` with docker comands or add your account to docker group:
-`sudo usermod -aG docker $USER`
+`sudo usermod -aG docker $(whoami)`
 
 # Links
 Telegram docker hub: https://hub.docker.com/r/telegrammessenger/proxy/
