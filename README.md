@@ -13,8 +13,7 @@ On Ubuntu/Debian:
 
 or
 
-`sudo apt-get -y install python-pip`
-`sudo pip install docker-compose`
+`sudo apt-get -y install python-pip && sudo pip install docker-compose`
 
 
 # Clone repository
