@@ -9,11 +9,15 @@ If you have one, read next, if not:
 install docker-compose
 On Ubuntu/Debian:
 
-`sudo apt-get update && sudo apt-get install docker-compose`
+`sudo apt-get update`
+
+`sudo apt-get install docker-compose`
 
 or
 
-`sudo apt-get -y install python-pip && sudo pip install docker-compose`
+`sudo apt-get -y install python-pip`
+
+`sudo pip install docker-compose`
 
 
 # Clone repository
