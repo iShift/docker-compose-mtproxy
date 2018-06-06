@@ -7,7 +7,6 @@ services:
         image: telegrammessenger/proxy:latest
         ports:
           - "443:443" #Proxy port
-          #- "2398:2398" # ONLY FOR TESTING - Show proxy stats on port 2398 outside of docker
         volumes:
            - "proxy-config:/data"
         restart: unless-stopped
