@@ -1,12 +1,10 @@
 version: '2'
 
-# Uncoment line if you want make any custom changes, if you want apply any environment change, uncoment "environment:" section too
-
 services:
     telegram-proxy:
         image: telegrammessenger/proxy:latest
         ports:
-          - "443:443" #Proxy port
+          - "443:443" #Proxy port, if you wish to change port - change left side 443 to another. Right side - it is port inside docker container
         volumes:
            - "proxy-config:/data"
         restart: unless-stopped
