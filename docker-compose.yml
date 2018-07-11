@@ -3,6 +3,7 @@ version: '2'
 services:
     telegram-proxy:
         image: telegrammessenger/proxy:latest
+        container_name: tg-proxy
         ports:
           - "443:443" #Proxy port, if you wish to change port - change left side 443 to another. Right side - it is port inside docker container
         volumes:
@@ -10,5 +11,13 @@ services:
         restart: unless-stopped
         env_file:
            - ./config.env
+    tg-proxy-watchtower:
+        image: v2tec/watchtower
+        container_name: tg-proxy-watchtower
+        volumes:
+          - /var/run/docker.sock:/var/run/docker.sock
+          - /root/.docker/config.json:/config.json
+        command: telegrammessenger/proxy:latest
+        restart: unless-stopped
 volumes:
   proxy-config:
