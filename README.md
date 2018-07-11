@@ -1,5 +1,6 @@
 # docker-compose-mtproxy
-With docker-compose file you can easy install telegram mtproto proxy and configure it.
+With docker-compose file you can easy install telegram mtproto proxy and configure it. 
+Also build in watchdog check for update telegram-proxy server and if new version come - update it and restart without any action from you.
 
 # Docker
 If you have one, read next, if not:
